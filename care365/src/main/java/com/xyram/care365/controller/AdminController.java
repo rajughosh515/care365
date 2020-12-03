@@ -66,6 +66,12 @@ public class AdminController {
 		return "Details will add shortly";
 	}
 	
+	@ApiOperation(value="DialysisCenter's details from Admin profile test  ")
+	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/test")
+	public String test() {
+		return "Details will add shortly";
+	}
+	
 	/*@RequestMapping(method = RequestMethod.GET, value = "/api/v1/auth/validate-token")
 	public String validateToken() {
 		return "Details will add shortly";
