@@ -1,0 +1,105 @@
+package com.xyram.care365.controller;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.xyram.care365.model.PasswordChg;
+import com.xyram.care365.model.User;
+
+@RestController
+public class CareController {
+	@RequestMapping(method = RequestMethod.GET, value = "/api/xyram")
+	public String sayHello() {
+		return "Swagger Hello World";
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/api/xyram/login")//resetPassword
+	public User getLogin(@RequestBody User user) {
+		
+		String loginId=user.getLoginId();
+		System.out.println("login :: "+loginId);
+		String password =user.getPassword();
+		System.out.println("password :: "+password);
+		User user1=new User();
+		if(loginId.equalsIgnoreCase("raju") && password.equalsIgnoreCase("ghosh")) {
+			
+			user1.setMessage("Success");
+			user1.setRoleId(111);
+			
+			return user1;
+		}
+		
+		user1.setMessage("failure");
+		return user1;
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/api/xyram/resetPassword")//
+	public PasswordChg resetPassword(@RequestBody PasswordChg pChg) {
+		
+		String loginID=pChg.getLoginId();
+		String oldPwd=pChg.getOldPwd();
+		String newPwd=pChg.getNewPwd();
+		String reNewPwd=pChg.getReNewPwd();
+		
+		
+		PasswordChg paschg = new PasswordChg();
+		
+		if(loginID.equalsIgnoreCase("Raju") && oldPwd.equalsIgnoreCase(paschg.getNewPwd()) &&newPwd.equalsIgnoreCase(reNewPwd)) {
+			paschg.setNewPwd(newPwd);
+			paschg.setMessage("Password changed successfully");
+			return paschg;
+		}
+		
+		paschg.setMessage("Please Enter valid details");
+		return paschg;
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/api/xyram/getUserProfile")//getUserProfile
+	public String getUserProfile() {
+		return "Swagger Hello World";
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/api/xyram/getPatientsCount")//getUserProfile
+	public String getPatientsCount() {
+		return "Swagger Hello World";
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/api/xyram/getNewRegisterCount")//getUserProfile
+	public String getNewRegisterCount() {
+		return "Swagger Hello World";
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/api/xyram/sendMessage")//getUserProfile
+	public String sendMessage() {
+		return "Swagger Hello World";
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/api/xyram/sendNotification")//getUserProfile
+	public String sendNotification() {
+		return "Swagger Hello World";
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/api/xyram/getPatients")//getUserProfile
+	public String getPatients() {
+		return "Swagger Hello World";
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/api/xyram/getHighAlertCount")//getUserProfile
+	public String getHighAlertCount() {
+		return "Swagger Hello World";
+	}
+	@RequestMapping(method = RequestMethod.GET, value = "/api/xyram/getPatientDetails")//getUserProfile
+	public String getPatientDetails() {
+		return "Swagger Hello World";
+	}
+	@RequestMapping(method = RequestMethod.GET, value = "/api/xyram/getEmergencyDtls")//getUserProfile
+	public String getEmergencyDtls() {
+		return "Swagger Hello World";
+	}
+	@RequestMapping(method = RequestMethod.POST, value = "/api/xyram/getCareGvrPtDtls")//getUserProfile
+	public String getCareGvrPtDtls () {
+		return "Swagger Hello World";
+	}
+}

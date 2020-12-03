@@ -1,0 +1,5 @@
+package com.xyram.care365.controller;
+
+public class NotificationController {
+
+}

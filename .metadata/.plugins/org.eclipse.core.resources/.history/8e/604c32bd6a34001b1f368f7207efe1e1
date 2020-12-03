@@ -1,0 +1,20 @@
+package com.xyram.care365.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CareGiverController {
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/api/v1/caregiver/")
+	public String caregiverHello() {
+		return "Details will add shortly";
+	}
+
+	@RequestMapping(method = RequestMethod.GET, value = "/api/v1/getUserProfile")
+	public String getUserProfile() {
+		return "Details will add shortly";
+	}
+	
+}
