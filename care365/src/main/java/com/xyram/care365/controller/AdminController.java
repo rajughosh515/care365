@@ -12,65 +12,84 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 public class AdminController {
 	
-	@ApiOperation(value="Patients details from Admin profile ")
+	@ApiOperation(value="Patients details can get from Admin profile ")
 	@RequestMapping(method = RequestMethod.GET, value = "/api/v1/admin/getPatients")
 	public String getPatients() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="Doctors details from Admin profile   ")
+	@ApiOperation(value="Doctors details can get from Admin profile   ")
 	@RequestMapping(method = RequestMethod.GET, value = "/api/v1/admin/getDoctors")
 	public String getDoctors() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="DialysisCenter's details from Admin profile   ")
+	@ApiOperation(value="DialysisCenter's details can get from Admin profile   ")
 	@RequestMapping(method = RequestMethod.GET, value = "/api/v1/admin/getDialysisCenters")
 	public String getDialysisCenters() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="Patients details from Admin profile ")
+	@ApiOperation(value="Patients details can add from Admin profile ")
 	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/addPatients")
 	public String addPatients() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="Doctors details from Admin profile   ")
+	@ApiOperation(value="Doctors details can add from Admin profile   ")
 	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/addDoctors")
 	public String addDoctors() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="DialysisCenter's details from Admin profile   ")
+	@ApiOperation(value="DialysisCenter's details can add from Admin profile   ")
 	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/addDialysisCenters")
 	public String addDialysisCenters() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="Patients details from Admin profile ")
-	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/updatePatients")
+	@ApiOperation(value="Patients details can update from Admin profile ")
+	@RequestMapping(method = RequestMethod.PUT, value = "/api/v1/admin/updatePatients")
 	public String updatePatients() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="Doctors details from Admin profile   ")
-	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/updateDoctors")
+	@ApiOperation(value="Doctors details can update from Admin profile   ")
+	@RequestMapping(method = RequestMethod.PUT, value = "/api/v1/admin/updateDoctors")
 	public String updateDoctors() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="DialysisCenter's details from Admin profile   ")
-	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/updateDialysisCenters")
+	@ApiOperation(value="DialysisCenter's details can update from Admin profile   ")
+	@RequestMapping(method = RequestMethod.PUT, value = "/api/v1/admin/updateDialysisCenters")
 	public String updateDialysisCenters() {
 		return "Details will add shortly";
 	}
 	
-	@ApiOperation(value="DialysisCenter's details from Admin profile test  ")
-	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/test")
-	public String test() {
+	@ApiOperation(value="Patients details can delete from Admin profile ")
+	@RequestMapping(method = RequestMethod.DELETE, value = "/api/v1/admin/deletePatients")
+	public String deletePatients() {
 		return "Details will add shortly";
 	}
+		
+	@ApiOperation(value="Doctors details can delete from Admin profile   ")
+	@RequestMapping(method = RequestMethod.DELETE, value = "/api/v1/admin/deleteDoctors")
+	public String deleteDoctors() {
+		return "Details will add shortly";
+	}
+	
+	@ApiOperation(value="DialysisCenter's details can delete from Admin profile   ")
+	@RequestMapping(method = RequestMethod.DELETE, value = "/api/v1/admin/deleteDialysisCenters")
+	public String deleteDialysisCenters() {
+		return "Details will add shortly";
+	}
+	
+	/*
+	 * @ApiOperation(value="DialysisCenter's details from Admin profile test  ")
+	 * 
+	 * @RequestMapping(method = RequestMethod.POST, value = "/api/v1/admin/test")
+	 * public String test() { return "Details will add shortly"; }
+	 */
 	
 	/*@RequestMapping(method = RequestMethod.GET, value = "/api/v1/auth/validate-token")
 	public String validateToken() {
