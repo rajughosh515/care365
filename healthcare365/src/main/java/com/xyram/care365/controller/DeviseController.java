@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/api/v1/devise")
+@RequestMapping("/api/v1/device")
 public class DeviseController {
 
 	@ApiOperation(value="Devise details can get from device controller ")
-	@RequestMapping(method = RequestMethod.GET, value = "/getDeviseDetails")
+	@RequestMapping(method = RequestMethod.GET, value = "/getDeviceDetails")
 	public String getDeviseDtls(@RequestHeader(value="Authorization") String authorization) {
 		// requestBodyValiadator.userAuthorization(accessKey);
 		return "Devise Details will add shortly";
