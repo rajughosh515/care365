@@ -12,11 +12,24 @@ import io.swagger.annotations.ApiOperation;
 public class DeviseController {
 
 	@ApiOperation(value="Devise details can get from device controller ")
-	@RequestMapping(method = RequestMethod.GET, value = "/getDeviceDetails")
-	public String getDeviceDtls(@RequestHeader(value="Authorization") String authorization) {
+	@RequestMapping(method = RequestMethod.GET, value = "/getDeviseDetails")
+	public String getDeviseDtls(@RequestHeader(value="Authorization") String authorization) {
 		// requestBodyValiadator.userAuthorization(accessKey);
-		return "Details will add shortly";
+		return "Devise Details will add shortly";
 	}
 	
+	@ApiOperation(value="Blood Pressure details can get from device controller ")
+	@RequestMapping(method = RequestMethod.GET, value = "/getBloodPressure")
+	public String getBP(@RequestHeader(value="Authorization") String authorization) {
+		// requestBodyValiadator.userAuthorization(accessKey);
+		return "BloodPressure Details will add shortly";
+	}
+	
+	@ApiOperation(value="Weight details can get from device controller ")
+	@RequestMapping(method = RequestMethod.GET, value = "/getWeight")
+	public String getWeight(@RequestHeader(value="Authorization") String authorization) {
+		// requestBodyValiadator.userAuthorization(accessKey);
+		return "Weight Details will add shortly";
+	}
 	
 }
