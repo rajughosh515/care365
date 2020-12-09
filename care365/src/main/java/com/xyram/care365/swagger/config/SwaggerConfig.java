@@ -1,11 +1,8 @@
 package com.xyram.care365.swagger.config;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import com.google.common.base.Predicate;
-
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
@@ -26,10 +23,11 @@ import static com.google.common.base.Predicates.or;
 
 		private Predicate<String> postPaths() {
 			return or(regex("/api/posts.*"), regex("/api/v1.*"));
-		}		
+		}	
+		
 		private ApiInfo apiInfo() {
 			return new ApiInfo("Test","Test","Test","Test","Test","Test","Test");
 		}
 
-	}
+}
 
