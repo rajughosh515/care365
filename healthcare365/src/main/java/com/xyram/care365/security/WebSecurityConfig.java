@@ -49,6 +49,7 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/swagger-resources", //
             "/configuration/security", //
             "/swagger-ui.html",
+            "/api/v1/auth/login",
            "/authenticate",//
             "/webjars/**" //
 };
