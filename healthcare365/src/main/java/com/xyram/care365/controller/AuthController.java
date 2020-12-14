@@ -24,7 +24,7 @@ public class AuthController {
 	
 	@ApiOperation(value="user login details")
 	@RequestMapping(method = RequestMethod.POST, value = "/login")
-	public User login(@RequestBody User user,@RequestHeader(value="Authorization") String authorization) {		
+	public User login(@RequestBody User user) {		
 		String loginId=user.getLoginId();
 		System.out.println("login :: "+loginId);
 		String password =user.getPassword();
